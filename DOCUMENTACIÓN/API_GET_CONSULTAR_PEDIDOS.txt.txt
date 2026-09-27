@@ -1,0 +1,37 @@
+DOCUMENTACIÓN DE API - CHILIBANA
+
+2. SERVICIO: CONSULTAR PEDIDOS
+
+Método HTTP:
+GET
+
+Ruta:
+http://localhost:3000/api/pedidos
+
+Descripción:
+Permite consultar todos los pedidos registrados en la base de datos de ChiliBana.
+
+Datos de entrada:
+Este servicio no requiere datos en el cuerpo de la solicitud.
+
+Respuesta exitosa:
+Código HTTP: 200 OK
+
+Ejemplo:
+
+[
+    {
+        "_id": "ID_GENERADO_POR_MONGODB",
+        "cliente": "Laura",
+        "tipoPedido": "En sitio",
+        "producto": "Gomitas enchiladas",
+        "cantidad": 2
+    }
+]
+
+Si no existen pedidos registrados, la respuesta es:
+
+[]
+
+Función:
+Permite visualizar la información de los pedidos almacenados en MongoDB.

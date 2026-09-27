@@ -1,0 +1,43 @@
+DOCUMENTACIÓN DE API - CHILIBANA
+
+4. SERVICIO: ELIMINAR PEDIDO
+
+Método HTTP:
+DELETE
+
+Ruta:
+http://localhost:3000/api/pedidos/:id
+
+Descripción:
+Permite eliminar un pedido registrado en la base de datos de ChiliBana.
+
+Parámetro:
+- id: identificador único del pedido generado por MongoDB.
+
+Datos de entrada:
+El identificador del pedido se envía en la URL.
+
+Ejemplo de solicitud:
+
+DELETE /api/pedidos/ID_DEL_PEDIDO
+
+Respuesta exitosa:
+Código HTTP: 200 OK
+
+Ejemplo:
+
+{
+    "mensaje": "Pedido eliminado correctamente."
+}
+
+Respuesta cuando el pedido no existe:
+Código HTTP: 404 Not Found
+
+Ejemplo:
+
+{
+    "mensaje": "Pedido no encontrado."
+}
+
+Función:
+Permite eliminar un pedido existente de la base de datos.

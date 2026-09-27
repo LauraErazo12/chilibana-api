@@ -1,0 +1,45 @@
+DOCUMENTACIÓN DE API - CHILIBANA
+
+3. SERVICIO: ACTUALIZAR PEDIDO
+
+Método HTTP:
+PUT
+
+Ruta:
+http://localhost:3000/api/pedidos/:id
+
+Descripción:
+Permite actualizar los datos de un pedido registrado en la base de datos de ChiliBana.
+
+Parámetro:
+- id: identificador único del pedido generado por MongoDB.
+
+Datos de entrada:
+La información que se desea actualizar se envía en formato JSON.
+
+Ejemplo de solicitud:
+
+{
+    "cantidad": 3
+}
+
+Respuesta exitosa:
+Código HTTP: 200 OK
+
+Ejemplo:
+
+{
+    "mensaje": "Pedido actualizado correctamente."
+}
+
+Respuesta cuando el pedido no existe:
+Código HTTP: 404 Not Found
+
+Ejemplo:
+
+{
+    "mensaje": "Pedido no encontrado."
+}
+
+Función:
+Permite modificar la información de un pedido existente.

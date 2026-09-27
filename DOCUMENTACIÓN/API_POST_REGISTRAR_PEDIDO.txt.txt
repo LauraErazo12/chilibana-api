@@ -1,0 +1,56 @@
+DOCUMENTACIÓN DE API - CHILIBANA
+
+1. SERVICIO: REGISTRAR PEDIDO
+
+Método HTTP:
+POST
+
+Ruta:
+http://localhost:3000/api/pedidos
+
+Descripción:
+Permite registrar un nuevo pedido en la base de datos de ChiliBana.
+
+Datos de entrada:
+El servicio recibe la información del pedido en formato JSON.
+
+Ejemplo de solicitud:
+
+{
+    "cliente": "Laura",
+    "tipoPedido": "En sitio",
+    "producto": "Gomitas enchiladas",
+    "cantidad": 2
+}
+
+Campos:
+- cliente: nombre del cliente.
+- tipoPedido: tipo de pedido, por ejemplo Domicilio o En sitio.
+- producto: producto solicitado.
+- cantidad: cantidad de productos.
+
+Respuesta exitosa:
+Código HTTP: 201 Created
+
+Ejemplo:
+
+{
+    "mensaje": "Pedido registrado correctamente.",
+    "id": "ID_GENERADO_POR_MONGODB"
+}
+
+Validaciones:
+- Los campos cliente, tipoPedido y producto son obligatorios.
+- La cantidad debe ser mínimo 1.
+
+Respuesta cuando faltan campos:
+
+{
+    "mensaje": "Los campos cliente, tipoPedido y producto son obligatorios."
+}
+
+Respuesta cuando la cantidad no es válida:
+
+{
+    "mensaje": "La cantidad debe ser mínimo 1."
+}
